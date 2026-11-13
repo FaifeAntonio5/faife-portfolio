@@ -1,0 +1,25 @@
+@reference "../../app/globals.css";
+
+.button {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-colors;
+}
+
+.button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent-light;
+}
+
+.primary {
+  @apply bg-accent text-white;
+}
+
+.primary:hover {
+  @apply bg-violet-500;
+}
+
+.outline {
+  @apply border border-line text-text;
+}
+
+.outline:hover {
+  @apply border-accent-light text-accent-light;
+}

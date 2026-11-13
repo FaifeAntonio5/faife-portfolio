@@ -1,0 +1,64 @@
+@reference "../../app/globals.css";
+
+.header {
+  @apply sticky top-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur-md;
+}
+
+.nav {
+  @apply mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4;
+}
+
+.logo {
+  @apply font-mono text-lg font-medium;
+}
+
+.logoAccent {
+  @apply text-accent-light;
+}
+
+/* Links no computador */
+.links {
+  @apply hidden items-center gap-8 md:flex;
+}
+
+.link {
+  @apply text-sm text-muted transition-colors;
+}
+
+.link:hover {
+  @apply text-text;
+}
+
+.desktopCta {
+  @apply hidden md:block;
+}
+
+/* Botão do menu no telemóvel */
+.menuButton {
+  @apply inline-flex size-11 items-center justify-center rounded-lg border border-line md:hidden;
+}
+
+/* Menu aberto no telemóvel */
+.mobileMenu {
+  @apply border-t border-line md:hidden;
+}
+
+.mobileList {
+  @apply flex flex-col gap-1 px-6 py-4;
+}
+
+.mobileLink {
+  @apply block rounded-lg px-3 py-3 text-muted;
+}
+
+.mobileLink:hover {
+  @apply bg-surface text-text;
+}
+
+.mobileCtaItem {
+  @apply pt-2;
+}
+
+.mobileCta {
+  @apply flex min-h-12 items-center justify-center rounded-xl bg-accent font-semibold text-white;
+}

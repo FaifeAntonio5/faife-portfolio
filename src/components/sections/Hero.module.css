@@ -1,0 +1,102 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply mx-auto flex max-w-6xl flex-col-reverse items-center gap-14 px-6 py-20 md:flex-row md:py-28;
+}
+
+/* Texto */
+.content {
+  @apply flex flex-1 flex-col gap-6;
+}
+
+.badge {
+  @apply self-start rounded-full border border-line bg-surface px-4 py-2 font-mono text-xs uppercase tracking-[0.08em] text-accent-light;
+}
+
+.title {
+  @apply font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl;
+}
+
+.highlight {
+  @apply text-accent-light;
+}
+
+.intro {
+  @apply max-w-xl text-lg leading-relaxed text-muted;
+}
+
+.actions {
+  @apply flex flex-wrap gap-4;
+}
+
+.techRow {
+  @apply mt-2 flex flex-wrap items-center gap-2.5;
+}
+
+.techLabel {
+  @apply mr-1 text-sm text-muted;
+}
+
+.techTag {
+  @apply rounded-lg border border-line bg-surface px-3 py-1.5 font-mono text-xs;
+}
+
+/* Foto (estilo template 1: cápsula vertical com contorno deslocado) */
+.photoColumn {
+  @apply flex flex-col items-center gap-8;
+}
+
+.photoWrapper {
+  @apply relative isolate p-6;
+}
+
+.glow {
+  @apply absolute inset-6 -z-20 rounded-full bg-accent/35 blur-3xl;
+}
+
+/* Curvas finas atrás da foto */
+.lines {
+  @apply absolute -inset-6 -z-10 h-[calc(100%+3rem)] w-[calc(100%+3rem)];
+  stroke: var(--color-accent-light);
+  stroke-width: 1.2;
+  opacity: 0.45;
+}
+
+/* Tamanho e formato da cápsula */
+.frame {
+  @apply relative w-64 md:w-80;
+  aspect-ratio: 3 / 4.2;
+}
+
+/* O contorno roxo deslocado para baixo e para a direita */
+.frame::before {
+  content: "";
+  @apply absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-full border-[1.5px] border-accent-light;
+}
+
+/* A cápsula com fundo azul-claro, como no template */
+.capsule {
+  @apply relative h-full w-full overflow-hidden rounded-full shadow-2xl shadow-black/50;
+  background: linear-gradient(160deg, #7dd3fc 0%, #22d3ee 55%, #0e7490 100%);
+}
+
+.photo {
+  @apply object-cover object-top;
+}
+
+/* Selo "Disponível" */
+.status {
+  @apply inline-flex items-center gap-2 rounded-full border border-emerald-800 bg-emerald-950/60 px-4 py-2 text-sm text-emerald-100;
+}
+
+.dot {
+  @apply relative flex size-2;
+}
+
+.dotPing {
+  @apply absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75;
+}
+
+.dotCore {
+  @apply relative inline-flex size-2 rounded-full bg-emerald-400;
+}

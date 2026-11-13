@@ -1,0 +1,25 @@
+@reference "../../app/globals.css";
+
+.wrapper {
+  @apply flex max-w-2xl flex-col gap-3;
+}
+
+.center {
+  @apply mx-auto items-center text-center;
+}
+
+.left {
+  @apply items-start text-left;
+}
+
+.eyebrow {
+  @apply font-mono text-sm uppercase tracking-[0.12em] text-accent-light;
+}
+
+.title {
+  @apply font-display text-3xl font-bold tracking-tight md:text-4xl;
+}
+
+.text {
+  @apply leading-relaxed text-muted;
+}

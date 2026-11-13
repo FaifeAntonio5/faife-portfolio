@@ -1,0 +1,38 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply border-t border-line bg-section;
+}
+
+.inner {
+  @apply mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-16 pt-24;
+}
+
+.grid {
+  @apply grid gap-5 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.card {
+  @apply flex flex-col gap-4 rounded-2xl border border-line bg-surface p-7 transition;
+}
+
+.card:hover {
+  @apply -translate-y-1 border-accent/60;
+}
+
+.icon {
+  @apply flex size-13 items-center justify-center rounded-xl bg-accent/20 text-accent-light transition-colors;
+}
+
+/* Quando o rato passa pelo cartão, o ícone fica roxo cheio */
+.card:hover .icon {
+  @apply bg-accent text-white;
+}
+
+.cardTitle {
+  @apply font-display text-xl font-semibold;
+}
+
+.cardText {
+  @apply leading-relaxed text-muted;
+}

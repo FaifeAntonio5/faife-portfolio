@@ -1,0 +1,55 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply mx-auto flex max-w-6xl flex-col gap-12 px-6 py-24;
+}
+
+/* 1 coluna no telemóvel, 2 no computador */
+.grid {
+  @apply grid gap-x-12 gap-y-7 md:grid-cols-2;
+}
+
+.skill {
+  @apply flex flex-col gap-2.5;
+}
+
+/* Linha de cima: ícone + nome à esquerda, nível à direita */
+.header {
+  @apply flex items-center justify-between gap-4;
+}
+
+.name {
+  @apply flex items-center gap-3 font-medium;
+}
+
+.icon {
+  @apply size-5 shrink-0;
+}
+
+.label {
+  @apply font-mono text-sm text-accent-light;
+}
+
+/* Barra: fundo escuro */
+.track {
+  @apply h-2 w-full overflow-hidden rounded-full bg-surface-2;
+}
+
+/* Barra: preenchimento roxo (a largura vem do TSX) */
+.fill {
+  @apply h-full rounded-full bg-gradient-to-r from-accent to-accent-light;
+  animation: grow 1.2s ease-out both;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}
+
+/* Quem prefere menos movimento não vê a animação */
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    animation: none;
+  }
+}

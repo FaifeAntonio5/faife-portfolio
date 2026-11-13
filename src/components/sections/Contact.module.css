@@ -1,0 +1,184 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply border-t border-line bg-section;
+}
+
+.inner {
+  @apply mx-auto grid max-w-6xl items-start gap-12 px-6 py-24 lg:grid-cols-[1fr_1.1fr];
+}
+
+/* ───── Lado esquerdo ───── */
+.info {
+  @apply flex flex-col gap-7;
+}
+
+.badges {
+  @apply flex flex-wrap gap-2.5;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-2 text-sm text-muted;
+}
+
+.badge svg {
+  @apply text-accent-light;
+}
+
+.channels {
+  @apply grid gap-3 sm:grid-cols-2 lg:grid-cols-1;
+}
+
+/* Cada canal recebe a cor da marca em --brand (vem do TSX) */
+.channel {
+  @apply relative rounded-2xl border border-line bg-surface transition;
+}
+
+.channel:hover {
+  @apply -translate-y-0.5;
+  border-color: color-mix(in srgb, var(--brand) 55%, transparent);
+}
+
+.channelLink {
+  @apply flex min-h-16 items-center gap-3.5 px-4 py-3.5;
+}
+
+.channelLink:focus-visible {
+  @apply rounded-2xl outline-2 outline-offset-2 outline-accent-light;
+}
+
+.channelIcon {
+  @apply flex size-11 shrink-0 items-center justify-center rounded-xl;
+  color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 15%, transparent);
+}
+
+.channelText {
+  @apply flex min-w-0 flex-1 flex-col;
+}
+
+.channelLabel {
+  @apply text-xs text-muted;
+}
+
+.channelValue {
+  @apply truncate text-sm font-medium;
+}
+
+.channelArrow {
+  @apply shrink-0 text-muted transition;
+}
+
+.channel:hover .channelArrow {
+  @apply translate-x-0.5 -translate-y-0.5;
+  color: var(--brand);
+}
+
+/* Botão de copiar o e-mail (por cima do cartão) */
+.copyButton {
+  @apply absolute right-3 top-3 flex size-8 items-center justify-center rounded-lg border border-line bg-bg text-muted transition-colors;
+}
+
+.copyButton:hover {
+  @apply border-accent-light text-accent-light;
+}
+
+/* No cartão do e-mail, a seta dá lugar ao botão de copiar */
+.channel:has(.copyButton) .channelArrow {
+  @apply invisible;
+}
+
+/* ───── Lado direito: formulário ───── */
+.formWrapper {
+  @apply relative isolate;
+}
+
+.glow {
+  @apply absolute -inset-4 -z-10 rounded-[2rem] bg-accent/20 blur-3xl;
+}
+
+.form {
+  @apply flex flex-col gap-5 rounded-3xl border border-line bg-surface p-7 shadow-2xl shadow-black/40 md:p-8;
+}
+
+.formHeader {
+  @apply flex flex-col gap-1 border-b border-line pb-5;
+}
+
+.formTitle {
+  @apply font-display text-2xl font-semibold;
+}
+
+.formSubtitle {
+  @apply text-sm text-muted;
+}
+
+.field {
+  @apply flex flex-col gap-2;
+}
+
+.labelRow {
+  @apply flex items-center justify-between;
+}
+
+.label {
+  @apply text-sm font-medium;
+}
+
+.counter {
+  @apply font-mono text-xs text-muted;
+}
+
+.input {
+  @apply min-h-12 w-full rounded-xl border border-line bg-bg px-4 py-3 text-text transition-colors;
+}
+
+.input::placeholder {
+  @apply text-muted/60;
+}
+
+.input:focus {
+  @apply border-accent-light outline-none ring-4 ring-accent/20;
+}
+
+.textarea {
+  @apply resize-y;
+}
+
+/* Assunto: menu de seleção com seta roxa */
+.select {
+  @apply cursor-pointer appearance-none pr-11;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23A78BFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.select option {
+  @apply bg-surface text-text;
+}
+
+/* Botões */
+.actions {
+  @apply flex flex-col gap-3 pt-1 sm:flex-row;
+}
+
+.submit {
+  @apply inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-white transition-colors;
+}
+
+.submit:hover {
+  @apply bg-violet-500;
+}
+
+.secondary {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line px-5 py-3 font-semibold text-text transition-colors;
+}
+
+.secondary:hover {
+  @apply border-accent-light text-accent-light;
+}
+
+.submit:focus-visible,
+.secondary:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent-light;
+}

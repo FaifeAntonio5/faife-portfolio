@@ -1,0 +1,64 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply mx-auto flex max-w-6xl flex-col gap-12 px-6 py-24;
+}
+
+.columns {
+  @apply grid gap-12 lg:grid-cols-[1.3fr_1fr];
+}
+
+/* Texto */
+.content {
+  @apply flex flex-col gap-6;
+}
+
+.paragraph {
+  @apply text-lg leading-relaxed text-muted;
+}
+
+/* Linha do tempo */
+.timelineCard {
+  @apply rounded-2xl border border-line bg-surface p-7;
+}
+
+.timelineTitle {
+  @apply mb-6 text-sm font-semibold tracking-wide text-accent-light;
+}
+
+.timeline {
+  @apply relative flex flex-col gap-7 border-l border-line pl-7;
+}
+
+.timelineItem {
+  @apply relative;
+}
+
+.timelineDot {
+  @apply absolute -left-[33px] top-1.5 size-3 rounded-full border-2 border-accent-light bg-bg;
+}
+
+.year {
+  @apply font-mono text-sm font-medium text-accent-light;
+}
+
+.timelineText {
+  @apply mt-1 leading-relaxed;
+}
+
+/* Bloco roxo: formação, línguas, qualidades */
+.facts {
+  @apply grid gap-8 rounded-3xl bg-accent p-8 md:grid-cols-3 md:p-10;
+}
+
+.fact {
+  @apply flex flex-col gap-3;
+}
+
+.factTitle {
+  @apply font-display text-xl font-bold text-white;
+}
+
+.factList {
+  @apply flex flex-col gap-1.5 text-violet-50;
+}

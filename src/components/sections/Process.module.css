@@ -1,0 +1,33 @@
+@reference "../../app/globals.css";
+
+.section {
+  @apply border-b border-line bg-section;
+}
+
+.inner {
+  @apply mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-24 pt-8;
+}
+
+.steps {
+  @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.step {
+  @apply flex flex-col gap-3 rounded-2xl border border-line bg-bg p-6;
+}
+
+.number {
+  @apply font-mono text-sm text-accent-light;
+}
+
+.stepTitle {
+  @apply font-display text-lg font-semibold;
+}
+
+.stepText {
+  @apply leading-relaxed text-muted;
+}
+
+.actions {
+  @apply flex flex-wrap justify-center gap-4;
+}
