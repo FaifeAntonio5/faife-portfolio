@@ -142,14 +142,13 @@ export const about = {
 export const timeline = [
   { year: "2022", text: "Concluí a 12.ª classe na Escola Secundária Samora Moisés Machel" },
   { year: "2023", text: "Entrei em Engenharia Informática e comecei a trabalhar como freelancer" },
-  { year: "[ANO]", text: "App de Transporte Partilhado na Jornada Científica da UniZambeze" },
   { year: "2026", text: "Sistema de Assiduidade Docente e desenvolvimento do FazAi" },
 ];
 
 export const facts = [
   {
     title: "Formação",
-    lines: ["Licenciatura em Engenharia Informática", "Universidade Zambeze · 2023 – [ANO]"],
+    lines: ["Licenciatura em Engenharia Informática", "Universidade Zambeze · 2023 – 2026"],
   },
   {
     title: "Línguas",
