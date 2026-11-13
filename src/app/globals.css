@@ -13,9 +13,10 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-jetbrains);
-  --font-display: var(--font-jetbrains);
-  --font-mono: var(--font-jetbrains);
+  --font-sans: var(--font-inter);            /* texto principal */
+  --font-display: var(--font-space-grotesk); /* títulos */
+  --font-mono: var(--font-jetbrains);        /* código e etiquetas */
+  --font-button: var(--font-poppins);        /* botões */
 }
 
 html {
@@ -26,5 +27,4 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-weight: 500;
 }
